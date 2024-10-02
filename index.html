@@ -2,127 +2,147 @@
 
 <html lang="ru">
 
-  <head>
-      <meta name="robots" content="noindex, nofollow">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <title> Задание 1 WEB </title>
-  </head>
+</head>
 
-  <body>
+<body>
 
-      <h1>
-          Выполнение задания 1 по Web
-      </h1>
+    <h1>
+        Выполнение задания 1 по Web
+    </h1>
 
-      <p>
-          <img src="logo.png" height="170" width="480" align="middle">
-      </p>
+    <h2> Список гиперссылок </h2>
 
-      <ol>
-          <li><a href="http://kubsu.ru">Кубанский государственный университет</a></li>
+    <ol>
+        <li><a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
 
-          <li><a href="https://kubsu.ru/">КубГУ</a></li>
+        <li><a href="https://kubsu.ru/">Абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
 
-          <li><a href="https://kubsu.ru/"><img src="kubsu.jpg" style="width: 600px;"></a></li>
+        <li><a href="https://kubsu.ru/"><img src="kubsu.jpg" alt="КубГУ" style="width: 600px;"></a></li>
 
-          <li><a href="index.html">Главная страница</a></li>
+        <li><a href="http://kubsu.ru">Сокращенная ссылка на внутреннюю страницу</a></li>
 
-          <li><a href="#reg">Регистрация</a></li>
+        <li><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
 
-          <li>Одно из ведущих высших учебных заведений, расположенное в Краснодаре - <a href="https://kubsu.ru/">КубГУ</a>!</li>
+        <li><a href="#reg">Ссылка на фрагмент текущей страницы</a></li>
 
-          <li><a href="">Пустой href</a></li>
+        <li>Одно из ведущих высших учебных заведений, расположенное в Краснодаре - <a href="https://kubsu.ru/">КубГУ</a>!</li>
 
-          <li><a onclick="alert("Ссылка без href"); return false;">Без href</a></li>
+        <li><a href="https://www.kubsu.ru/ru/university/library">Ссылка с тремя параметрами</a></li>
 
-      </ol>
+        <li><a href="index.html#reg">Ссылка с параметром id</a></li>
 
-      <a id="reg"
+        <li><a href="index.html">Относительная ссылка на страницу в текущем каталоге</a></li>
 
-      <h2> Регистрация </h2>
+        <li section id="about"><a href="http://kubsu.ru#sveden">Относительная ссылка на страницу в каталоге about</a></li>
 
-      <form action="/"
-            method="POST">
+        <li><a href="https://kubsu.ru/education">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
 
-          <label>
-              ФИО:<br>
-              <input name="field-name-1"
-                     placeholder="Иванов Иван Иванович">
-          </label><br>
+        <li><a href="https://kubsu.ru/education/programs">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
 
+        <li><a href="https://kubsu.ru/ru/timetable/#main-content">Ссылка на фрагмент страницы стороннего сайта</a></li>
 
-          <label>
-              Номер телефона:<br>
-              <input name="field-tel"
-                     type="tel"
-                     placeholder="Введите ваш номер">
-          </label><br>
+        <li>
+            <map name="clickable">
+                <area shape="rect" coords="0,0,100,100" href="https://kubsu.ru/" alt="Ссылка 1">
+                <area shape="circle" coords="200,200,50" href="https://kubsu.ru/" alt="Ссылка 2">
+                <img usemap="#clickable" src="image.jpg" alt="picture" width="500px" height="300px">
+            </map>
+        </li>
 
+        <li><a href="">Пустой href</a></li>
 
-          <label>
-              Email:<br>
-              <input name="field-email"
-                     type="email"
-                     placeholder="Введите вашу почту">
-          </label><br>
+        <li><a onclick="alert('Ссылка без href'); return false;">Без href</a></li>
 
+        <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
 
-          <label>
-              Дата рождения:<br/>
-              <input name="field-date"
-                     type="date">
-          </label><br>
+        <li><a href="https://kubsu.ru/" rel="noopener noreferrer">Запрещенная для индексации поисковиками</a></li>
 
+    </ol>
 
-          Пол:<br>
-          <label>
-              <input type="radio"
-                     name="radio-group-1" value="Значение1">
-              Мужской
-          </label>
-          <label>
-              <input type="radio"
-                     name="radio-group-1" value="Значение2">
-              Женский
-          </label><br>
+    <h2 section id="reg"> Регистрация </h2>
 
-          <p>
-              <label>
-                  Любимый язык программирования:
-                  <br>
-                  <select name="field-name-4[]"
-                          multiple="multiple">
-                      <option value="Значение1">Pascal</option>
-                      <option value="Значение2">C</option>
-                      <option value="Значение3">C++</option>
-                      <option value="Значение4">JavaScript</option>
-                      <option value="Значение5">PHP</option>
-                      <option value="Значение6">Haskel</option>
-                      <option value="Значение7">Clojure</option>
-                      <option value="Значение8">Prolog</option>
-                      <option value="Значение9">Scala</option>
-                  </select>
-              </label><br>
-          </p>
+    <form action="/index.php"
+          method="POST">
 
-          <label>
-              Биография:
-              <br>
-              <textarea name="field-name-2"></textarea>
-          </label><br>
+        <label>
+            ФИО:<br>
+            <input name="field-name-1"
+                   placeholder="Иванов Иван Иванович">
+        </label><br>
 
-          <br>
-          <label>
-              <input type="checkbox"
-                     name="check-1">
-              С контрактом ознакомлен (а)
-          </label><br>
+        <label>
+            Номер телефона:<br>
+            <input name="field-tel"
+                   type="tel"
+                   placeholder="Введите ваш номер">
+        </label><br>
 
-          <p>
-              <input type="submit" value="Сохранить">
-          </p>
+        <label>
+            Email:<br>
+            <input name="field-email"
+                   type="email"
+                   placeholder="Введите вашу почту">
+        </label><br>
 
-      </form>
+        <label>
+            Дата рождения:<br />
+            <input name="field-date"
+                   type="date">
+        </label><br>
 
-  </body>
+        Пол:<br>
+        <label>
+            <input type="radio"
+                   name="radio-group-1" value="Значение1">
+            Мужской
+        </label>
+        <label>
+            <input type="radio"
+                   name="radio-group-1" value="Значение2">
+            Женский
+        </label><br>
+
+        <p>
+            <label>
+                Любимый язык программирования:
+                <br>
+                <select name="field-name-4[]"
+                        multiple="multiple">
+                    <option value="Значение1">Pascal</option>
+                    <option value="Значение2">C</option>
+                    <option value="Значение3">C++</option>
+                    <option value="Значение4">JavaScript</option>
+                    <option value="Значение5">PHP</option>
+                    <option value="Значение6">Haskel</option>
+                    <option value="Значение7">Clojure</option>
+                    <option value="Значение8">Prolog</option>
+                    <option value="Значение9">Scala</option>
+                </select>
+            </label><br>
+        </p>
+
+        <label>
+            Биография:
+            <br>
+            <textarea name="field-name-2"
+                      placeholder="Расскажите о себе"></textarea>
+        </label><br>
+
+        <br>
+        <label>
+            <input type="checkbox"
+                   name="check-1">
+            С контрактом ознакомлен (а)
+        </label><br>
+
+        <input type="submit" value="Сохранить">
+
+    </form>
+
+</body>
 
 </html>
